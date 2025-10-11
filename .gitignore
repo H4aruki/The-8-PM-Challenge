@@ -24,3 +24,18 @@ dist-ssr
 *.sw?
 
 .env
+.env.local
+.env.*.local
+
+# Clasp configuration file
+.clasp.json
+
+# Editor directories and files
+.vscode/
+.idea/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+技育キャンプ2025-backup/
