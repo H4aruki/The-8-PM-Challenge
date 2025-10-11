@@ -1,0 +1,21 @@
+{
+  "timeZone": "Asia/Tokyo",
+  "dependencies": {
+    "libraries": [
+      {
+        "userSymbol": "daily_process",
+        "version": "0",
+        "libraryId": "18qQO6PCI79Vs0BLjXJkLHIVQf0ErR2a4O0nDoz5NYZ3EPlipq9soGbYQ",
+        "developmentMode": true
+      },
+      {
+        "userSymbol": "front_connect",
+        "version": "0",
+        "libraryId": "1HfK7_0vDcqp5vdml7ZJi9Qylz7QRjnSLba3MJUL8b6H0jRta8MlrlB3-",
+        "developmentMode": true
+      }
+    ]
+  },
+  "exceptionLogging": "STACKDRIVER",
+  "runtimeVersion": "V8"
+}

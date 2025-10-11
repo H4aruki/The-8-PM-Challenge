@@ -1,0 +1,21 @@
+{
+  "timeZone": "Asia/Tokyo",
+  "dependencies": {
+    "libraries": [
+      {
+        "userSymbol": "GPT_connect",
+        "version": "0",
+        "libraryId": "1Zv6IAo0Gqlu8ujgnL6VHLUPLRblKaYhfFIE95XCwZLlVgr36ZV3u-Igh",
+        "developmentMode": true
+      },
+      {
+        "userSymbol": "DB_process",
+        "version": "0",
+        "libraryId": "1Qc2MXbOeBZV6ozIvlA683fGLj2HbGkybD6ZU9jz-BpdWsRWO0L_OAA4F",
+        "developmentMode": true
+      }
+    ]
+  },
+  "exceptionLogging": "STACKDRIVER",
+  "runtimeVersion": "V8"
+}

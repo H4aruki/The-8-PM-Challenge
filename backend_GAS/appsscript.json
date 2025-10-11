@@ -1,0 +1,31 @@
+{
+  "timeZone": "Asia/Tokyo",
+  "exceptionLogging": "STACKDRIVER",
+  "runtimeVersion": "V8",
+  "dependencies": {
+    "libraries": [
+      {
+        "userSymbol": "DB_process",
+        "libraryId": "1Qc2MXbOeBZV6ozIvlA683fGLj2HbGkybD6ZU9jz-BpdWsRWO0L_OAA4F",
+        "version": "0",
+        "developmentMode": true
+      },
+      {
+        "userSymbol": "GPT_connect",
+        "libraryId": "1Zv6IAo0Gqlu8ujgnL6VHLUPLRblKaYhfFIE95XCwZLlVgr36ZV3u-Igh",
+        "version": "0",
+        "developmentMode": true
+      },
+      {
+        "userSymbol": "daily_process",
+        "version": "0",
+        "libraryId": "18qQO6PCI79Vs0BLjXJkLHIVQf0ErR2a4O0nDoz5NYZ3EPlipq9soGbYQ",
+        "developmentMode": true
+      }
+    ]
+  },
+  "webapp": {
+    "executeAs": "USER_DEPLOYING",
+    "access": "ANYONE_ANONYMOUS"
+  }
+}
