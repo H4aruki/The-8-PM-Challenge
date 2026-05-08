@@ -88,9 +88,9 @@ function useSubmitAnswer() {
 function Shell({ children }: { children: React.ReactNode }) {
   return (
     <div style={page}>
-      <div style={adSide}>広告スペース</div>
+      <div style={sidePanel}>フリースペース</div>
       <main style={main}>{children}</main>
-      <div style={adSide}>広告スペース</div>
+      <div style={sidePanel}>フリースペース</div>
     </div>
   );
 }
@@ -241,7 +241,7 @@ const page: React.CSSProperties = {
   background: "#fff",
   fontFamily: "sans-serif",
 };
-const adSide: React.CSSProperties = {
+const sidePanel: React.CSSProperties = {
   width: "15%",
   background: "#f0f0f0",
   textAlign: "center",
