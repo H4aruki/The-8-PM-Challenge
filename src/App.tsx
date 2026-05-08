@@ -4,6 +4,7 @@ import { QueryClient, QueryClientProvider, useMutation, useQuery, useQueryClient
 
 /** HTML版の見た目（Orbitron/Noto Sans JP・左右広告・中央配置・緑のリボン・ボタン）に合わせた実装。 */
 const GAS_URL = import.meta.env.VITE_GAS_URL as string;
+console.log("GAS_URL check:", GAS_URL);
 const ACTIONS = {
   getTodayQuiz: "gettodaysQuiz",
   getPast5Days: "getRecentData",
