@@ -1,77 +1,81 @@
-#設計に関するドキュメント
+
+# The-8-PM-Challenge
+
+## Link
+Pages Link Here !! -> (https://h4aruki.github.io/The-8-PM-Challenge/)
+
+## Overview
+AIが考えたなぞなぞに正解することを目指すだけのシンプルなゲームです。ただし、使用しているAIは古いモデルで、よく謎めいた問題と解答を提示してきます。ユーザーは、その謎めいた問題の答えをAIが想定したとおりに解答する必要があります。問題の公開は毎日PM8時(*1)で、公開から正解までの時間が短い上位10名の名前が、正解発表と同時に表示されます。
+
+*1 ：GASでトリガーを設定しての実行なので、ジャスト20時ではなく、20時から20時15分の間です。
+
+<div origin= center>
+    <img src="./Images/top-page.png" width= "1000" height="650">
+</div>
+
+## Background
+技育キャンプハッカソン2025 vol.12にて開発しました。
+
+2024年にリリースされた、AIとチャットしながらリアルタイムで尋問するゲーム「ドキドキAI尋問ゲーム」からインスピレーションを得て、AIと対決するWebアプリを開発することにしました。当時はまだAIの精度が高くないことはわかっていたため、その状況を利用して、AIが考えためちゃくちゃななぞなぞに挑戦する仕様はおもしろいのではないかというのがこのサイトを開発した背景です。
+
+
+
+
+
+## Design Documentation
+設計書はNotionページにて管理しているため、そちらを添付します。
 
 https://hurricane-dance-850.notion.site/25f605b98b4f80c180afe5b8e7b3f352?source=copy_link
 
-# React + TypeScript + Vite
+## Build With
+### Frontend
+![](https://img.shields.io/badge/TypeScript-4285F4?style=for-the-badge&logo=typescript&logoColor=white)
+![](https://img.shields.io/badge/react-4285F4?style=for-the-badge&logo=react&logoColor=white)
+![](https://img.shields.io/badge/vite-4285F4?style=for-the-badge&logo=vite&logoColor=white)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+### Backend
+![](https://img.shields.io/badge/Google_Apps_Script-4285F4?style=for-the-badge&logo=google-apps-script&logoColor=white)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### DataBase
+![](https://img.shields.io/badge/google_Spread_sheet-4285F4?style=for-the-badge&logo=googlesheets&logoColor=white)
 
-## React Compiler
+### CI/CD
+![](https://img.shields.io/badge/githubactions-4285F4?style=for-the-badge&logo=githubactions&logoColor=white)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Document
+![](https://img.shields.io/badge/notion-4285F4?style=for-the-badge&logo=notion&logoColor=white)
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Contributors ✨
+<table>
+    <tr>
+        <td align="center">
+            <a href="https://github.com/H4aruki">
+                <img src="https://github.com/H4aruki.png" width="100px;" alt=""/><br />
+                <sub><b>H4aruki</b></sub>
+            </a><br />
+            <a href="https://github.com/H4aruki/MyTechPulse/commits?author=H4aruki" title="Code">💻</a>
+            <a href="https://github.com/H4aruki/MyTechPulse/commits?author=H4aruki" title="Construction">🚧</a>
+            <a href="https://github.com/H4aruki/MyTechPulse/commits?author=H4aruki" title="Design">🎨</a>
+        </td>
+        <td align="center">
+            <a href="https://github.com/KaichoHarry">
+                <img src="https://github.com/KaichoHarry.png" width="100px;" alt=""/><br />
+                <sub><b>はりぃ会長</b></sub>
+            </a><br />
+            <a href="https://github.com/H4aruki/MyTechPulse/commits?author=KaichoHarry" title="Code">💻</a>
+            <a href="https://github.com/H4aruki/MyTechPulse/commits?author=KaichoHarry" title="Construction">🚧</a>
+            <a href="https://github.com/H4aruki/MyTechPulse/commits?author=KaichoHarry" title="Ideas">🤔</a>
+            <a href="https://github.com/H4aruki/MyTechPulse/commits?author=KaichoHarry" title="Design">🎨</a>
+        </td>
+        <td align="center">
+            <a href="https://github.com/departiment">
+                <img src="https://github.com/departiment.png" width="100px;" alt=""/><br />
+                <sub><b>榎並みみみみみみみ</b></sub>
+            </a><br />
+            <a href="https://github.com/H4aruki/MyTechPulse/commits?author=KaichoHarry" title="Code">💻</a>
+            <a href="https://github.com/H4aruki/MyTechPulse/commits?author=KaichoHarry" title="Construction">🚧</a>
+            <a href="https://github.com/H4aruki/MyTechPulse/commits?author=KaichoHarry" title="Design">🎨</a>
+        </td>
+    </tr>
+</table>
