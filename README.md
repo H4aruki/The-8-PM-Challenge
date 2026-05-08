@@ -29,23 +29,21 @@ https://hurricane-dance-850.notion.site/25f605b98b4f80c180afe5b8e7b3f352?source=
 
 ## Build With
 ### Frontend
-![](https://img.shields.io/badge/TypeScript-4285F4?style=for-the-badge&logo=typescript&logoColor=white)
-![](https://img.shields.io/badge/react-4285F4?style=for-the-badge&logo=react&logoColor=white)
-![](https://img.shields.io/badge/vite-4285F4?style=for-the-badge&logo=vite&logoColor=white)
+![](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=FFD62E)
 
 
 ### Backend
 ![](https://img.shields.io/badge/Google_Apps_Script-4285F4?style=for-the-badge&logo=google-apps-script&logoColor=white)
-
 ### DataBase
-![](https://img.shields.io/badge/google_Spread_sheet-4285F4?style=for-the-badge&logo=googlesheets&logoColor=white)
+![](https://img.shields.io/badge/Google_Sheets-34A853?style=for-the-badge&logo=google-sheets&logoColor=white)
 
 ### CI/CD
-![](https://img.shields.io/badge/githubactions-4285F4?style=for-the-badge&logo=githubactions&logoColor=white)
+![](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
 
 ### Document
-![](https://img.shields.io/badge/notion-4285F4?style=for-the-badge&logo=notion&logoColor=white)
-
+![](https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion&logoColor=white)
 ## Contributors ✨
 <table>
     <tr>
