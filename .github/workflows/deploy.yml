@@ -18,9 +18,13 @@ jobs:
         with:
           node-version: 20
       - run: npm install
-      - run: npm run build
+      
+      # ビルド時にGitHubの設定画面にある VITE_GAS_URL を読み込みます
+      - name: Build
+        run: npm run build
         env:
-        VITE_GAS_URL: ${{ vars.VITE_GAS_URL }}
+          VITE_GAS_URL: ${{ vars.VITE_GAS_URL }}
+          
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
