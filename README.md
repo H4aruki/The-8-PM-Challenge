@@ -11,6 +11,7 @@ AIが考えたなぞなぞに正解することを目指すだけのシンプル
 
 <div origin= center>
     <img src="./Images/top-page.png" width= "1000" height="650">
+        <img src="./Images/過去の記録.png" width= "1000" height="650">
 </div>
 
 ## Background
