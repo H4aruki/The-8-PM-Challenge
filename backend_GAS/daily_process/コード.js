@@ -112,7 +112,16 @@ function make_quiz(){
   const date = getCurrentDateTime();
   const use_prompt = prompt[date[2]];
   const GPT_ans = GPT_connect.connect_GPT(use_prompt, get_DB_quiz());
-  const quiz = GPT_ans.split(',');
+
+  /*「問題文,正解」を最後のカンマで2つに分ける。
+    答えはひらがなのみの短い語なのでカンマを含まないが、
+    問題文にはAIがカンマを混ぜてくることがあるため、
+    split(',')だと3つ以上に割れて列数が合わなくなる。*/
+  const raw = String(GPT_ans).trim();
+  const sep = raw.lastIndexOf(',');
+  const quiz = sep === -1
+    ? [raw, '']
+    : [raw.slice(0, sep).trim(), raw.slice(sep + 1).trim()];
   Logger.log(use_prompt);
   Logger.log(quiz);
 
@@ -130,9 +139,12 @@ function ss_add_quiz(){
   const day_of_the_week = today[2];
 
   /*なぞなぞの内容を取得*/
-  const quizData = make_quiz();
-  const content = [setting_time, ...  quizData, day_of_the_week]
-  const f_content = [setting_time, ...quizData];   //FiveDaysLog用
+  const [question, answer] = make_quiz();
+
+  /*書き込む範囲は4列と3列で固定されているため、
+    展開せずに要素を明示して列数のずれを防ぐ。*/
+  const content = [setting_time, question, answer, day_of_the_week];
+  const f_content = [setting_time, question, answer];   //FiveDaysLog用
 
   /*日付の情報をインデックス0に代入
   content.splice(0, 0, setting_time);   //(開始位置, 削除する数, 追加する要素１, 追加する要素２, ...)
@@ -161,7 +173,11 @@ function ss_add_quiz(){
 
   /*FiveDaysLogの最初の行を削除*/
   const delete_sheet = connect_DB('FiveDaysLog');
-  delete_sheet.deleteRow(2);  
+
+  /*見出し行しかない場合は削除対象がなく範囲外エラーになる*/
+  if (delete_sheet.getLastRow() >= 2) {
+    delete_sheet.deleteRow(2);
+  }
 
 }
 

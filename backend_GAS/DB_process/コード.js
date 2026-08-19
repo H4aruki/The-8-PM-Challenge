@@ -50,6 +50,13 @@ function delete_TodayAnswer(){
   const lastRow = sheet.getLastRow();
   const startRow = 2;  // 削除を開始する行
   const numRowsToDelete = lastRow - 1; // 2行目から最終行までの行数
+
+  /*解答が0件の日は見出し行しかなく、削除行数が0になって範囲外エラーになる*/
+  if (numRowsToDelete < 1) {
+    Logger.log('delete_TodayAnswer: 削除対象の解答がないため何もしません。');
+    return;
+  }
+
   sheet.deleteRows(startRow, numRowsToDelete);
 
 }
@@ -57,7 +64,14 @@ function delete_TodayAnswer(){
 
 function delete_TodaysQuiz(){
   const delete_sheet = daily_process.connect_DB('TodaysQuiz');
-  delete_sheet.deleteRow(2);  
+
+  /*見出し行しかない場合は削除対象がなく範囲外エラーになる*/
+  if (delete_sheet.getLastRow() < 2) {
+    Logger.log('delete_TodaysQuiz: 削除対象の行がないため何もしません。');
+    return;
+  }
+
+  delete_sheet.deleteRow(2);
 }
 
 
