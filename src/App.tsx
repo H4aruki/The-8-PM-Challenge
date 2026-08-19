@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from "react";
-import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
+import { HashRouter, Routes, Route, useNavigate } from "react-router-dom";
 import { QueryClient, QueryClientProvider, useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 
 /** HTML版の見た目（Orbitron/Noto Sans JP・左右広告・中央配置・緑のリボン・ボタン）に合わせた実装。 */
@@ -224,13 +224,13 @@ const queryClient = new QueryClient();
 export default function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <BrowserRouter basename={import.meta.env.BASE_URL}>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<QuizPage />} />
           <Route path="/quiz" element={<QuizPage />} />
           <Route path="/history" element={<HistoryPage />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </QueryClientProvider>
   );
 }
