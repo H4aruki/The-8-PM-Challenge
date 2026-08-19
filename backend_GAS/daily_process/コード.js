@@ -173,7 +173,11 @@ function ss_add_quiz(){
 
   /*FiveDaysLogの最初の行を削除*/
   const delete_sheet = connect_DB('FiveDaysLog');
-  delete_sheet.deleteRow(2);  
+
+  /*見出し行しかない場合は削除対象がなく範囲外エラーになる*/
+  if (delete_sheet.getLastRow() >= 2) {
+    delete_sheet.deleteRow(2);
+  }
 
 }
 
