@@ -166,13 +166,13 @@ function ss_add_quiz(){
 }
 
 
-/*20時に定期実行
+//20時に定期実行
 function daily_process(){
   DB_process.delete_TodayAnswer();
   ss_add_quiz();
   DB_process.delete_TodaysQuiz();
 }
-*/
+
 
 
 
